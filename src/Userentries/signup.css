@@ -1,0 +1,33 @@
+.signup-contents{
+    border:2px solid green;
+    width:300px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    border-radius:20px;
+    margin-top:10px;
+}
+.signup-contents input{
+    margin-top: 10px;
+}
+label{
+    font-size: small;
+}
+h3{
+    text-align: center;
+}
+button{
+    margin-top: 15px;
+    padding:8px;
+    cursor: pointer;
+}
+p{
+    color:red;
+}
+.after-signup {
+    color:green;
+    text-align: center;
+}
+.after-signup p{
+    color: green;
+}

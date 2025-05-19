@@ -1,0 +1,5 @@
+1. CORS ERROR: 
+When you try to hit localhost:3000/login  to localhost:8888/login it throws you a cors error.
+in you backend code use app.use(cors()) to handle it.
+
+2.

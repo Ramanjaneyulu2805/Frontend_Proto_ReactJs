@@ -1,0 +1,18 @@
+.pendingbox{
+    height:fit-content;
+    color:black;
+    width:fit-content;
+    text-align: center;
+    margin: auto;
+    border-radius:10px;
+    box-shadow: 5px 5px 5px 5px grey;
+
+}
+.main{
+    justify-content: space-around;
+}
+.buttons button{
+    cursor: pointer;
+}
+
+

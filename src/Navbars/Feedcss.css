@@ -1,0 +1,27 @@
+.card{
+    border:2px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px;
+    width:fit-content;
+    margin: auto;
+}
+.photo{
+text-align: center;
+width:200px;
+margin: auto;
+}
+.contents{
+    display: flex;
+    justify-content: space-around;
+}
+.btn-1{
+    height: fit-content;
+}
+.btn-2{
+height: fit-content;
+}
+button{
+    width: fit-content;
+}
+
+

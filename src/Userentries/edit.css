@@ -1,0 +1,25 @@
+.userchanged{
+    border:2px solid black;
+    width:fit-content;
+    margin:  auto;
+    padding: 10px;;
+}
+label{
+    color: black;
+}
+input{
+    border:2px solid black;
+    border-radius: 10px;   
+
+}
+.user{
+    border: 2px solid black;;
+}
+.editprofile{
+    text-align: center;
+}
+.button{
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.contents-box{
+    border:2px solid black;
+    width:fit-content;
+    margin:  auto;
+    border-radius:10px;
+    background-color:#36454F ;
+}
+
+.login-heading{
+    text-align: center;
+    color:white;
+}
+.contents_login{
+    width:250px;
+    height:fit-content;
+}
+.login-button{
+    text-align: center;
+}
+button{
+    border-radius: 10px;
+    width:50px;
+    padding: 5px;
+    background-color: lightblue;
+    border: none;
+}
+.contents_login div{
+    padding: 13px;
+}
+label{
+    font-size: small;
+    color: white;
+}
+input{
+    width:210px;
+    height:30px;
+    border-radius: 7px;
+    border: none;
+}
+.errors{
+    color: red;
+    font-size: small;
+    width: fit-content;
+}
+.email{
+    width: fit-content;
+    height:59px;
+}
+
