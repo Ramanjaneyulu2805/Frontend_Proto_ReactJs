@@ -12,9 +12,9 @@ const Editprofile=({user})=>{
 
 const Editchanges=async()=>{
     console.log(firstname)
-    const Edit_Api=await axios.patch('http://localhost:8888/profile/edit',{firstname:firstname},{withCredentials:true})  
+    const Edit_Api=await axios.patch('/api/profile/edit',{firstname:firstname},{withCredentials:true})  
     console.log('Edit_Api',Edit_Api.data)
-    const getprofile=await axios.get('http://localhost:8888/getprofile',{withCredentials:true})
+    const getprofile=await axios.get('/api/getprofile',{withCredentials:true})
     dispatch(addUser(getprofile.data)) 
     if(Edit_Api.data==='Profile updated successfully'){
         alert('Profile updated successfully')

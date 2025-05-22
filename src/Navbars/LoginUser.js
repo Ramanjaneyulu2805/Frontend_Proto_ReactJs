@@ -14,7 +14,7 @@ const LoggedUser= ()=>{
     useEffect(()=>{ 
         const getprofile=async ()=>{
         try{
-        const profile_details=await axios.get('http://localhost:8888/getprofile',{withCredentials:true})
+        const profile_details=await axios.get('/api/getprofile',{withCredentials:true})
         dispatch(addUser(profile_details.data))
     }
     catch(error){
@@ -25,7 +25,7 @@ const LoggedUser= ()=>{
 getprofile();
 },[])
    const logout=async ()=>{
-           const status= await axios.post('http://localhost:8888/logout',null,{withCredentials:true})
+           const status= await axios.post('/api/logout',null,{withCredentials:true})
             console.log('logged out successfully',status)
             dispatch(addUser({}))
             navigate('/login')

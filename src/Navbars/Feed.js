@@ -9,7 +9,7 @@ const Feed_users= ()=>{
         const feed=useSelector((store)=>store.feed);
         console.log('store data',feed)
         async function fetchData(){
-        const All_users= await  axios.get('http://localhost:8888/request/feed',{withCredentials:true})
+        const All_users= await  axios.get('/api/request/feed',{withCredentials:true})
         dispatch(allUsers(All_users.data))
         //updatefeeddata([...feed])
         }
@@ -18,7 +18,7 @@ const Feed_users= ()=>{
        
        const interested=async ()=>{
         console.log('in interested')
-            const interested_API=await axios.post(`http://localhost:8888/request/send/interested/${feed[0]._id}`,null,{withCredentials:true})
+            const interested_API=await axios.post(`/api/request/send/interested/${feed[0]._id}`,null,{withCredentials:true})
             setcount(count+1)
         }
         const ignored=()=>{

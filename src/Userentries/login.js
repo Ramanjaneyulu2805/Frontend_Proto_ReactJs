@@ -16,7 +16,7 @@ const navigate=useNavigate();
 const HandleLogin=async()=>{
 
     try{
-   const status= await axios.post('http://localhost:8888/login',{email,password},{withCredentials:true})//Send cookies/auth headers to the backend
+   const status= await axios.post('/api/login',{email,password},{withCredentials:true})//Send cookies/auth headers to the backend
    //This tells the browser: "Include credentials (cookies, HTTP auth) in this request.",
         if(status.data=='Entered EmailID is not registered'){
             setemailerror(status.data)

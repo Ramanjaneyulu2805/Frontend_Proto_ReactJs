@@ -16,7 +16,7 @@ console.log('re-render')
  },[count])
 
     const Sign_Up_API=async ()=>{
-            const signup=await axios.post('http://localhost:8888/signup',{firstname,lastname,email,password},{withCredentials:true})
+            const signup=await axios.post('/api/signup',{firstname,lastname,email,password},{withCredentials:true})
             console.log(signup.data)
             setstatus(signup.data)
             setcount(count+1)

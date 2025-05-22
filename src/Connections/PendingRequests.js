@@ -5,13 +5,13 @@ const Pending_Connections=()=>{
     const [user,setuser]=useState([]);
     const [connections,setconnections]=useState([])
 const Retriving_Connections=async ()=>{
-const Connecton_sent_from_other_user=await axios.get('http://localhost:8888/request/pending',{withCredentials:true})
+const Connecton_sent_from_other_user=await axios.get('/api/pending',{withCredentials:true})
 setuser(Connecton_sent_from_other_user.data.data)
 }
 
 
 const Connections=async ()=>{
-        const Accepted_Connections=await axios.get('http://localhost:8888/request/connections',{withCredentials:true})
+        const Accepted_Connections=await axios.get('/api/request/connections',{withCredentials:true})
         setconnections(Accepted_Connections.data)
         console.log('from accepted',Accepted_Connections.data)
     }
@@ -26,7 +26,7 @@ useEffect(()=>{
 
 
 const statusAccepted=async (id)=>{
-   const API_Accepted=await axios.post(`http://localhost:8888/request/review/accepted/${id}`,{},{withCredentials:true})
+   const API_Accepted=await axios.post(`/api/request/review/accepted/${id}`,{},{withCredentials:true})
 }
 
 
