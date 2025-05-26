@@ -3,13 +3,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { allUsers } from '../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { Base_url } from '../Baseurl';
 const Feed_users= ()=>{
     const [count,setcount]=useState(0);
         const dispatch=useDispatch();
         const feed=useSelector((store)=>store.feed);
         console.log('store data',feed)
         async function fetchData(){
-        const All_users= await  axios.get('/api/request/feed',{withCredentials:true})
+        const All_users= await  axios.get(Base_url+'request/feed',{withCredentials:true})
         dispatch(allUsers(All_users.data))
         //updatefeeddata([...feed])
         }
@@ -18,7 +19,7 @@ const Feed_users= ()=>{
        
        const interested=async ()=>{
         console.log('in interested')
-            const interested_API=await axios.post(`/api/request/send/interested/${feed[0]._id}`,null,{withCredentials:true})
+            const interested_API=await axios.post(Base_url+`request/send/interested/${feed[0]._id}`,null,{withCredentials:true})
             setcount(count+1)
         }
         const ignored=()=>{

@@ -5,6 +5,7 @@ import axios from 'axios';
 import addUser from '../redux/actions';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Base_url } from '../Baseurl';
 const Login=()=>{
 const [email,setemail]=useState('');
 const [password,setpassword]=useState('');
@@ -16,7 +17,7 @@ const navigate=useNavigate();
 const HandleLogin=async()=>{
 
     try{
-   const status= await axios.post('/api/login',{email,password},{withCredentials:true})//Send cookies/auth headers to the backend
+   const status= await axios.post(Base_url+'login',{email,password},{withCredentials:true})//Send cookies/auth headers to the backend
    //This tells the browser: "Include credentials (cookies, HTTP auth) in this request.",
         if(status.data=='Entered EmailID is not registered'){
             setemailerror(status.data)

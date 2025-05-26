@@ -1,0 +1,43 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editorAssociations": {
+    "*.rar": "default"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.fontFamily": "'Cascadia Code'",
+  "git.enableSmartCommit": true,
+  "json.schemas": [],
+  "git.confirmSync": false,
+
+  // 🛑 Disable Copilot
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.inlineSuggest.enable": false,
+
+  // 🛑 Disable all autocomplete sources
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+
+  // 🛑 Disable auto-completion typing behavior
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoSurround": "never",
+
+  // Optional: terminal autocomplete
+  "terminal.integrated.suggest.quickSuggestions": {
+    "commands": "off",
+    "arguments": "off",
+    "unknown": "off"
+  },
+
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  }
+}

@@ -1,4 +1,4 @@
-import { All_users, login_user } from "./const";
+import { All_users, login_user, Messages } from "./const";
 
  const addUser=(data)=>{
     return {
@@ -15,4 +15,15 @@ export  const allUsers=(data)=>{
         data
     }
 }
+
+
+export  const ChatMessages=(data)=>{
+    return {
+        type:Messages,
+        data
+    }
+}
+
+
+
 

@@ -1,6 +1,7 @@
 import styles from './edit.css'
 import {useState} from 'react'; 
 import axios from 'axios';  
+import {Base_url} from '../Baseurl';
 import addUser from '../redux/actions';
 import { useDispatch } from 'react-redux';
 const Editprofile=({user})=>{
@@ -12,9 +13,9 @@ const Editprofile=({user})=>{
 
 const Editchanges=async()=>{
     console.log(firstname)
-    const Edit_Api=await axios.patch('/api/profile/edit',{firstname:firstname},{withCredentials:true})  
+    const Edit_Api=await axios.patch(Base_url+'profile/edit',{firstname:firstname},{withCredentials:true})  
     console.log('Edit_Api',Edit_Api.data)
-    const getprofile=await axios.get('/api/getprofile',{withCredentials:true})
+    const getprofile=await axios.get(Base_url+'getprofile',{withCredentials:true})
     dispatch(addUser(getprofile.data)) 
     if(Edit_Api.data==='Profile updated successfully'){
         alert('Profile updated successfully')
@@ -73,3 +74,16 @@ const Editchanges=async()=>{
     )
 }
 export default Editprofile
+
+
+
+
+/*
+
+React uses client-side routing, meaning:
+
+URLs like /editprofile, /dashboard, etc. are handled by the React app in the browser, not by the server.
+
+But when you manually enter the URL in the browser, the browser asks the NGINX server, “Hey, give me /editprofile.”
+
+NGINX tries to find a real file or folder called /editprofile in /var/www/html, doesn't find it, and returns 404 Not Found.*/

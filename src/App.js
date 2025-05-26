@@ -7,6 +7,7 @@ import Pending_Connections from "./Connections/PendingRequests";
 import Connections from "./Connections/profileConnections";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Signup from "./Userentries/signup";
+import Chat from "./ChatBox/Chat";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
     <Route path="/connections" element={<Connections/>}/>
    <Route path="/pendingConnections" element={<Pending_Connections/>}/>
    <Route path="/signup" element={<Signup/>}/>
+    <Route path="/chat/:userid" element={<Chat/>}/>
     </Routes>
    </BrowserRouter>
 

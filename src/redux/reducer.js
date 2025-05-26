@@ -1,4 +1,4 @@
-import { login_user,All_users } from "./const";
+import { login_user,All_users,Messages } from "./const";
 
 export const login_reducer=(data=[],action)=>{
     switch(action.type){
@@ -17,6 +17,18 @@ export const login_reducer=(data=[],action)=>{
         case All_users:
             return action.data
         default: return data
+    }
+}
+
+export const All_Messages=(data=[],action)=>{
+
+    switch(action.type){
+        case Messages: 
+            
+            return action.data
+        default :
+            return data
+
     }
 }
 

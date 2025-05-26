@@ -1,0 +1,45 @@
+.chat-window{
+width: 600px;
+border: 2px solid grey;
+margin:auto;
+color:white;
+background-color: black;
+border-radius: 10px;
+height:500px;
+
+}
+.chat-window input{
+    width:350px;
+}
+.chat-window button{
+   border:2px solid green;
+   margin-top: 2px;
+}
+.send-button{
+    height: fit-content;
+    top: 2px;
+    width:100px;
+}   
+.input-button{
+display:flex;
+border:2px solid red;
+justify-content:center;
+}
+.messages-box{
+border:2px solid yellow;
+height:455px;
+
+}
+.send-message{
+border:2px solid white;
+
+}
+.received-message{
+border:2px solid white;
+}
+.messages-box div{
+margin-top:3px;
+}
+
+
+

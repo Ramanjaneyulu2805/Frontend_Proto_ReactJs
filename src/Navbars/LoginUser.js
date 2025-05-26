@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import styles from './loginnav.css';
 import addUser from '../redux/actions';
 import Feed_users from './Feed';
-import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Editprofile from '../Userentries/editprofile';
+import { Base_url } from '../Baseurl';
 const LoggedUser= ()=>{
     const navigate=useNavigate();
     const storedata=useSelector((store)=>store.user);
@@ -14,7 +14,7 @@ const LoggedUser= ()=>{
     useEffect(()=>{ 
         const getprofile=async ()=>{
         try{
-        const profile_details=await axios.get('/api/getprofile',{withCredentials:true})
+        const profile_details=await axios.get(Base_url+'getprofile',{withCredentials:true})
         dispatch(addUser(profile_details.data))
     }
     catch(error){
@@ -25,7 +25,7 @@ const LoggedUser= ()=>{
 getprofile();
 },[])
    const logout=async ()=>{
-           const status= await axios.post('/api/logout',null,{withCredentials:true})
+           const status= await axios.post(Base_url+'logout',null,{withCredentials:true})
             console.log('logged out successfully',status)
             dispatch(addUser({}))
             navigate('/login')
